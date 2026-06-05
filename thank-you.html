@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thank You | SMEC Automation — Enquiry Received</title>
+  <meta name="description" content="Thank you for contacting SMEC Automation. Your industrial control panel enquiry has been received and will be reviewed by the engineering team within 24 hours.">
+  <meta name="robots" content="noindex,follow">
+  <meta name="theme-color" content="#08111d">
+  <link rel="canonical" href="https://smecoilandgas.com/control-panel-manufacturer-india/thank-you">
+  <style>
+    :root {
+      --bg: #08111d;
+      --bg-soft: #0d1728;
+      --surface: rgba(255, 255, 255, 0.04);
+      --surface-strong: rgba(255, 255, 255, 0.08);
+      --line: rgba(255, 255, 255, 0.1);
+      --line-strong: rgba(255, 255, 255, 0.16);
+      --text: #edf3fb;
+      --muted: #a6b6cb;
+      --heading: #ffffff;
+      --accent: #4a90f7;
+      --accent-strong: #6aaefb;
+      --success: #4dd88a;
+      --shadow: 0 22px 60px rgba(1, 7, 16, 0.36);
+      --radius: 24px;
+      --radius-md: 18px;
+      --radius-sm: 12px;
+      --nav-height: 74px;
+      --heading-font: "Aptos Display", "Segoe UI Variable Display", "Trebuchet MS", "Segoe UI", sans-serif;
+      --body-font: "Aptos", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body-font);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ─── BACKGROUND GLOWS ─── */
+    body::before,
+    body::after {
+      content: '';
+      position: fixed;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+    }
+    body::before {
+      width: 55vw;
+      height: 55vw;
+      top: -12vw;
+      left: -8vw;
+      background: radial-gradient(circle, rgba(74, 144, 247, 0.07), transparent 65%);
+    }
+    body::after {
+      width: 40vw;
+      height: 40vw;
+      right: -8vw;
+      bottom: -10vw;
+      background: rgba(56, 189, 248, 0.06);
+    }
+
+    /* ─── TOPBAR ─── */
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      background: rgba(220, 230, 245, 0.97);
+      backdrop-filter: saturate(180%) blur(14px);
+      -webkit-backdrop-filter: saturate(180%) blur(14px);
+    }
+
+    .container {
+      width: min(1540px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    .nav {
+      min-height: var(--nav-height);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand-logo {
+      display: block;
+      height: 56px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .topbar .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      padding: 0 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(10, 25, 60, 0.35);
+      color: #0a193c;
+      background: transparent;
+      font-weight: 700;
+      font-size: 0.88rem;
+      white-space: nowrap;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+    }
+
+    .topbar .button-outline:hover {
+      background: rgba(10, 25, 60, 0.08);
+      border-color: rgba(10, 25, 60, 0.55);
+      transform: translateY(-2px);
+    }
+
+    /* ─── MAIN ─── */
+    main {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .panel {
+      width: min(820px, 100%);
+      padding: 36px 48px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(74, 144, 247, 0.14);
+      background:
+        radial-gradient(circle at top right, rgba(74, 144, 247, 0.08), transparent 40%),
+        linear-gradient(160deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.02));
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    /* ─── SUCCESS BADGE ─── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 16px;
+      border-radius: 999px;
+      background: rgba(77, 216, 138, 0.10);
+      border: 1px solid rgba(77, 216, 138, 0.22);
+      color: #a7f3c4;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .badge svg {
+      flex-shrink: 0;
+    }
+
+    /* ─── HEADING ─── */
+    .panel h1 {
+      margin: 12px 0 8px;
+      font-family: var(--heading-font);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      letter-spacing: -0.05em;
+      color: var(--heading);
+    }
+
+    .panel p {
+      color: var(--muted);
+      font-size: 1rem;
+      margin-bottom: 12px;
+    }
+
+    /* ─── WHAT HAPPENS NEXT CARD ─── */
+    .steps {
+      margin-top: 20px;
+      padding: 20px 24px;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--line);
+      background: var(--surface);
+    }
+
+    .steps-title {
+      font-family: var(--heading-font);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--heading);
+      margin-bottom: 18px;
+    }
+
+    .step-list {
+      display: grid;
+      gap: 14px;
+      list-style: none;
+    }
+
+    .step-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: rgba(74, 144, 247, 0.14);
+      border: 1px solid rgba(74, 144, 247, 0.28);
+      color: var(--accent);
+      font-size: 0.72rem;
+      font-weight: 800;
+      display: grid;
+      place-items: center;
+    }
+
+    /* ─── ACTIONS ─── */
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .button,
+    .button-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 46px;
+      padding: 0 22px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .button {
+      background: linear-gradient(135deg, #4a90f7 0%, #1a6ee0 100%);
+      color: #ffffff;
+      box-shadow: 0 8px 24px rgba(26, 110, 224, 0.28);
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 32px rgba(26, 110, 224, 0.40);
+    }
+
+    .button-outline {
+      background: transparent;
+      border-color: rgba(255, 255, 255, 0.15);
+      color: var(--heading);
+    }
+
+    .button-outline:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.28);
+      transform: translateY(-2px);
+    }
+
+    /* ─── CONTACT STRIP ─── */
+    .contact-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .contact-card {
+      padding: 18px 20px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--line);
+      background: var(--surface);
+      transition: border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-card:hover {
+      border-color: rgba(74, 144, 247, 0.28);
+      background: rgba(74, 144, 247, 0.04);
+    }
+
+    .contact-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--muted);
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .contact-card a {
+      color: var(--heading);
+      text-decoration: none;
+      font-size: 0.92rem;
+      font-weight: 500;
+    }
+
+    .contact-card a:hover {
+      color: var(--accent);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--line);
+      padding: 16px 24px;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--muted);
+    }
+
+    footer a {
+      color: var(--muted);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: var(--heading);
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 640px) {
+      .container {
+        width: min(1540px, calc(100% - 32px));
+      }
+
+      .nav {
+        min-height: auto;
+        padding: 14px 0;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .nav-actions {
+        width: 100%;
+      }
+
+      .panel {
+        padding: 32px 22px;
+      }
+
+      .contact-strip {
+        grid-template-columns: 1fr;
+      }
+
+      .actions,
+      .nav-actions {
+        flex-direction: column;
+      }
+
+      .button,
+      .button-outline {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    window.SMEC_TRACKING = {
+      gtmId: "GTM-XXXXXXX",
+      gaMeasurementId: "G-XXXXXXXXXX",
+      googleAdsId: "AW-XXXXXXXXX",
+      googleAdsConversions: {
+        thankYou: "AW-XXXXXXXXX/thank-you",
+        rfqSubmit: "AW-XXXXXXXXX/lead-submit"
+      }
+    };
+
+    function gtag() { window.dataLayer.push(arguments); }
+
+    (function initTagManager(cfg) {
+      if (!cfg.gtmId || cfg.gtmId.indexOf("GTM-") !== 0 || cfg.gtmId.indexOf("XXXX") !== -1) return;
+      window.dataLayer.push({ "gtm.start": Date.now(), event: "gtm.js" });
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(cfg.gtmId);
+      document.head.appendChild(s);
+    })(window.SMEC_TRACKING);
+
+    (function initGA4(cfg) {
+      if (!cfg.gaMeasurementId || cfg.gaMeasurementId.indexOf("G-") !== 0 || cfg.gaMeasurementId.indexOf("XXXX") !== -1) return;
+      var s = document.createElement("script");
+      s.async = true;
+      s.src = "https://www.googletagmanager.com/gtag/js?id=" + encodeURIComponent(cfg.gaMeasurementId);
+      document.head.appendChild(s);
+      gtag("js", new Date());
+      gtag("config", cfg.gaMeasurementId, {
+        send_page_view: true,
+        page_title: document.title,
+        page_location: window.location.href,
+        page_path: window.location.pathname
+      });
+    })(window.SMEC_TRACKING);
+  </script>
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="index.html" aria-label="SMEC Automation home">
+        <img class="brand-logo" src="smec-logo.png" alt="SMEC Automation" width="160" height="40">
+      </a>
+      <div class="nav-actions">
+        <a class="button-outline" href="index.html">Back to Main Page</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="panel">
+
+      <!-- Success badge -->
+      <span class="badge">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        Enquiry Received
+      </span>
+
+      <h1 id="thankYouHeading">Your Requirement Has Been Received</h1>
+      <p id="thankYouMessage">SMEC's engineering team will review your control panel enquiry and respond with the next technical step within 24 hours.</p>
+      <p>If your request is urgent, reach the team directly using the contacts below.</p>
+
+      <!-- What happens next -->
+      <div class="steps">
+        <div class="steps-title">What Happens Next</div>
+        <ul class="step-list">
+          <li>
+            <span class="step-num">1</span>
+            Initial technical review by SMEC engineering — typically within 24 hours.
+          </li>
+          <li>
+            <span class="step-num">2</span>
+            Clarification follow-up if drawings, RFQ scope or certifications need confirmation.
+          </li>
+          <li>
+            <span class="step-num">3</span>
+            Quotation or technical response based on your project stage and panel requirements.
+          </li>
+        </ul>
+      </div>
+
+      <!-- Actions -->
+      <div class="actions">
+        <a class="button" href="index.html">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          Return To Landing Page
+        </a>
+        <a class="button-outline" href="https://wa.me/918606047714?text=Hi%2C%20I%20just%20submitted%20an%20enquiry%20and%20would%20like%20to%20share%20additional%20details." target="_blank" rel="noopener">
+          Continue On WhatsApp
+        </a>
+      </div>
+
+      <!-- Contact strip -->
+      <div class="contact-strip">
+        <div class="contact-card">
+          <strong>Email</strong>
+          <a href="mailto:sales@smecong.com">sales@smecong.com</a>
+        </div>
+        <div class="contact-card">
+          <strong>Call</strong>
+          <a href="tel:+918588870618">+91 85888 70618</a>
+        </div>
+        <div class="contact-card">
+          <strong>WhatsApp</strong>
+          <a href="https://wa.me/918606047714" target="_blank" rel="noopener">+91 86060 47714</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer>
+    <span>&copy; <span id="year"></span> SMEC Automation. All rights reserved. &nbsp;|&nbsp;
+      <a href="index.html">Control Panel Manufacturer India</a>
+    </span>
+  </footer>
+
+  <script>
+    (function () {
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      function sendAdsConversion(key) {
+        var sendTo = window.SMEC_TRACKING.googleAdsConversions && window.SMEC_TRACKING.googleAdsConversions[key];
+        if (!sendTo || sendTo.indexOf("AW-") !== 0 || sendTo.indexOf("XXXX") !== -1 || typeof window.gtag !== "function") return;
+        window.gtag("event", "conversion", { send_to: sendTo, value: 1.0, currency: "INR" });
+      }
+
+      function trackEvent(name, params) {
+        var payload = Object.assign({ event: name }, params || {});
+        window.dataLayer.push(payload);
+        if (typeof window.gtag === "function") window.gtag("event", name, payload);
+      }
+
+      var url = new URL(window.location.href);
+      var name = url.searchParams.get("name");
+      var source = url.searchParams.get("source") || "unknown";
+      var company = url.searchParams.get("company");
+
+      if (name) {
+        var first = name.split(" ")[0];
+        document.getElementById("thankYouMessage").textContent =
+          "Thank you, " + first + ". SMEC\u2019s engineering team will review your control panel enquiry and respond with the next technical step within 24 hours.";
+      }
+
+      trackEvent("thank_you_page_view", {
+        page_location: window.location.href,
+        page_path: window.location.pathname,
+        lead_source: source,
+        company: company || ""
+      });
+      trackEvent("generate_lead", { currency: "INR", value: 1.0, lead_source: source });
+      sendAdsConversion("thankYou");
+    })();
+  </script>
+
+</body>
+</html>
