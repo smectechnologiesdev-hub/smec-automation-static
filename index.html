@@ -84,6 +84,11 @@
       display: block;
     }
 
+    /* the picture element only wraps WebP-with-PNG-fallback; keep it transparent to layout */
+    picture {
+      display: contents;
+    }
+
     .skip-link {
       position: absolute;
       top: -48px;
@@ -2216,7 +2221,7 @@
     <header class="topbar">
       <div class="container nav">
         <a class="brand" href="#top" aria-label="SMEC Automation home">
-          <img class="brand-logo" src="smec-logo.png" alt="SMEC Automation" width="160" height="40">
+          <picture><source type="image/webp" srcset="smec-logo.webp"><img fetchpriority="high" decoding="async" class="brand-logo" src="smec-logo.png" alt="SMEC Automation" width="160" height="40"></picture>
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="#who">Industries</a>
@@ -2421,141 +2426,141 @@
               <div class="client-marquee-wrap">
                 <!-- Row 1: logos 1–21, scrolls left -->
                 <div class="client-marquee-row">
-                  <div class="partner-logo-capsule"><img src="client-logos/1.png" alt="ONGC" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/2.png" alt="Shelf Drilling" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/3.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/4.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/5.png" alt="Schlumberger" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/6.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/7.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/8.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/9.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/10.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/11.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/12.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/13.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/14.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/15.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/16.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/17.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/18.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/19.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/20.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/21.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/1.webp"><img decoding="async" src="client-logos/1.png" alt="ONGC" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/2.webp"><img decoding="async" src="client-logos/2.png" alt="Shelf Drilling" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/3.webp"><img decoding="async" src="client-logos/3.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/4.webp"><img decoding="async" src="client-logos/4.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/5.webp"><img decoding="async" src="client-logos/5.png" alt="Schlumberger" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/6.webp"><img decoding="async" src="client-logos/6.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/7.webp"><img decoding="async" src="client-logos/7.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/8.webp"><img decoding="async" src="client-logos/8.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/9.webp"><img decoding="async" src="client-logos/9.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/10.webp"><img decoding="async" src="client-logos/10.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/11.webp"><img decoding="async" src="client-logos/11.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/12.webp"><img decoding="async" src="client-logos/12.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/13.webp"><img decoding="async" src="client-logos/13.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/14.webp"><img decoding="async" src="client-logos/14.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/15.webp"><img decoding="async" src="client-logos/15.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/16.webp"><img decoding="async" src="client-logos/16.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/17.webp"><img decoding="async" src="client-logos/17.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/18.webp"><img decoding="async" src="client-logos/18.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/19.webp"><img decoding="async" src="client-logos/19.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/20.webp"><img decoding="async" src="client-logos/20.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/21.webp"><img decoding="async" src="client-logos/21.png" alt="Client" loading="lazy"></picture></div>
                   <!-- duplicate for seamless loop -->
-                  <div class="partner-logo-capsule"><img src="client-logos/1.png" alt="ONGC" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/2.png" alt="Shelf Drilling" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/3.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/4.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/5.png" alt="Schlumberger" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/6.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/7.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/8.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/9.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/10.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/11.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/12.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/13.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/14.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/15.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/16.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/17.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/18.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/19.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/20.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/21.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/1.webp"><img decoding="async" src="client-logos/1.png" alt="ONGC" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/2.webp"><img decoding="async" src="client-logos/2.png" alt="Shelf Drilling" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/3.webp"><img decoding="async" src="client-logos/3.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/4.webp"><img decoding="async" src="client-logos/4.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/5.webp"><img decoding="async" src="client-logos/5.png" alt="Schlumberger" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/6.webp"><img decoding="async" src="client-logos/6.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/7.webp"><img decoding="async" src="client-logos/7.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/8.webp"><img decoding="async" src="client-logos/8.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/9.webp"><img decoding="async" src="client-logos/9.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/10.webp"><img decoding="async" src="client-logos/10.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/11.webp"><img decoding="async" src="client-logos/11.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/12.webp"><img decoding="async" src="client-logos/12.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/13.webp"><img decoding="async" src="client-logos/13.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/14.webp"><img decoding="async" src="client-logos/14.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/15.webp"><img decoding="async" src="client-logos/15.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/16.webp"><img decoding="async" src="client-logos/16.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/17.webp"><img decoding="async" src="client-logos/17.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/18.webp"><img decoding="async" src="client-logos/18.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/19.webp"><img decoding="async" src="client-logos/19.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/20.webp"><img decoding="async" src="client-logos/20.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/21.webp"><img decoding="async" src="client-logos/21.png" alt="Client" loading="lazy"></picture></div>
                 </div>
 
                 <!-- Row 2: logos 22–42, scrolls right -->
                 <div class="client-marquee-row reverse slow">
-                  <div class="partner-logo-capsule"><img src="client-logos/22.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/23.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/24.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/25.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/26.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/27.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/28.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/29.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/30.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/31.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/32.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/33.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/34.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/35.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/36.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/37.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/38.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/39.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/40.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/41.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/42.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/22.webp"><img decoding="async" src="client-logos/22.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/23.webp"><img decoding="async" src="client-logos/23.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/24.webp"><img decoding="async" src="client-logos/24.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/25.webp"><img decoding="async" src="client-logos/25.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/26.webp"><img decoding="async" src="client-logos/26.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/27.webp"><img decoding="async" src="client-logos/27.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/28.webp"><img decoding="async" src="client-logos/28.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/29.webp"><img decoding="async" src="client-logos/29.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/30.webp"><img decoding="async" src="client-logos/30.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/31.webp"><img decoding="async" src="client-logos/31.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/32.webp"><img decoding="async" src="client-logos/32.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/33.webp"><img decoding="async" src="client-logos/33.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/34.webp"><img decoding="async" src="client-logos/34.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/35.webp"><img decoding="async" src="client-logos/35.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/36.webp"><img decoding="async" src="client-logos/36.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/37.webp"><img decoding="async" src="client-logos/37.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/38.webp"><img decoding="async" src="client-logos/38.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/39.webp"><img decoding="async" src="client-logos/39.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/40.webp"><img decoding="async" src="client-logos/40.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/41.webp"><img decoding="async" src="client-logos/41.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/42.webp"><img decoding="async" src="client-logos/42.png" alt="Client" loading="lazy"></picture></div>
                   <!-- duplicate for seamless loop -->
-                  <div class="partner-logo-capsule"><img src="client-logos/22.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/23.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/24.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/25.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/26.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/27.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/28.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/29.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/30.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/31.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/32.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/33.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/34.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/35.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/36.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/37.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/38.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/39.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/40.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/41.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/42.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/22.webp"><img decoding="async" src="client-logos/22.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/23.webp"><img decoding="async" src="client-logos/23.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/24.webp"><img decoding="async" src="client-logos/24.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/25.webp"><img decoding="async" src="client-logos/25.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/26.webp"><img decoding="async" src="client-logos/26.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/27.webp"><img decoding="async" src="client-logos/27.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/28.webp"><img decoding="async" src="client-logos/28.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/29.webp"><img decoding="async" src="client-logos/29.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/30.webp"><img decoding="async" src="client-logos/30.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/31.webp"><img decoding="async" src="client-logos/31.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/32.webp"><img decoding="async" src="client-logos/32.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/33.webp"><img decoding="async" src="client-logos/33.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/34.webp"><img decoding="async" src="client-logos/34.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/35.webp"><img decoding="async" src="client-logos/35.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/36.webp"><img decoding="async" src="client-logos/36.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/37.webp"><img decoding="async" src="client-logos/37.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/38.webp"><img decoding="async" src="client-logos/38.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/39.webp"><img decoding="async" src="client-logos/39.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/40.webp"><img decoding="async" src="client-logos/40.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/41.webp"><img decoding="async" src="client-logos/41.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/42.webp"><img decoding="async" src="client-logos/42.png" alt="Client" loading="lazy"></picture></div>
                 </div>
 
                 <!-- Row 3: logos 43–62, scrolls left -->
                 <div class="client-marquee-row">
-                  <div class="partner-logo-capsule"><img src="client-logos/43.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/44.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/45.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/46.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/47.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/48.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/49.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/50.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/51.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/52.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/53.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/54.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/55.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/56.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/57.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/58.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/59.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/60.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/61.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/62.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/43.webp"><img decoding="async" src="client-logos/43.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/44.webp"><img decoding="async" src="client-logos/44.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/45.webp"><img decoding="async" src="client-logos/45.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/46.webp"><img decoding="async" src="client-logos/46.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/47.webp"><img decoding="async" src="client-logos/47.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/48.webp"><img decoding="async" src="client-logos/48.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/49.webp"><img decoding="async" src="client-logos/49.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/50.webp"><img decoding="async" src="client-logos/50.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/51.webp"><img decoding="async" src="client-logos/51.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/52.webp"><img decoding="async" src="client-logos/52.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/53.webp"><img decoding="async" src="client-logos/53.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/54.webp"><img decoding="async" src="client-logos/54.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/55.webp"><img decoding="async" src="client-logos/55.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/56.webp"><img decoding="async" src="client-logos/56.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/57.webp"><img decoding="async" src="client-logos/57.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/58.webp"><img decoding="async" src="client-logos/58.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/59.webp"><img decoding="async" src="client-logos/59.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/60.webp"><img decoding="async" src="client-logos/60.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/61.webp"><img decoding="async" src="client-logos/61.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/62.webp"><img decoding="async" src="client-logos/62.png" alt="Client" loading="lazy"></picture></div>
                   <!-- duplicate for seamless loop -->
-                  <div class="partner-logo-capsule"><img src="client-logos/43.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/44.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/45.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/46.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/47.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/48.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/49.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/50.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/51.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/52.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/53.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/54.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/55.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/56.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/57.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/58.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/59.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/60.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/61.png" alt="Client" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="client-logos/62.png" alt="Client" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/43.webp"><img decoding="async" src="client-logos/43.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/44.webp"><img decoding="async" src="client-logos/44.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/45.webp"><img decoding="async" src="client-logos/45.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/46.webp"><img decoding="async" src="client-logos/46.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/47.webp"><img decoding="async" src="client-logos/47.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/48.webp"><img decoding="async" src="client-logos/48.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/49.webp"><img decoding="async" src="client-logos/49.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/50.webp"><img decoding="async" src="client-logos/50.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/51.webp"><img decoding="async" src="client-logos/51.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/52.webp"><img decoding="async" src="client-logos/52.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/53.webp"><img decoding="async" src="client-logos/53.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/54.webp"><img decoding="async" src="client-logos/54.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/55.webp"><img decoding="async" src="client-logos/55.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/56.webp"><img decoding="async" src="client-logos/56.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/57.webp"><img decoding="async" src="client-logos/57.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/58.webp"><img decoding="async" src="client-logos/58.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/59.webp"><img decoding="async" src="client-logos/59.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/60.webp"><img decoding="async" src="client-logos/60.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/61.webp"><img decoding="async" src="client-logos/61.png" alt="Client" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="client-logos/62.webp"><img decoding="async" src="client-logos/62.png" alt="Client" loading="lazy"></picture></div>
                 </div>
               </div>
             </div>
@@ -2565,35 +2570,35 @@
               <p style="font-size:0.76rem; font-weight:700; letter-spacing:0.16em; text-transform:uppercase; color:var(--muted); margin:0 0 14px;">OEM &amp; Technology Partners</p>
               <div class="client-marquee-wrap">
                 <div class="partner-marquee-row reverse">
-                  <div class="partner-logo-capsule"><img src="partner-logos/siemens.png" alt="Siemens" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/schneider-electric.png" alt="Schneider Electric" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/abb.png" alt="ABB" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/honeywell.png" alt="Honeywell" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/emerson.png" alt="Emerson" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/phoenix-contact.png" alt="Phoenix Contact" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/deif.png" alt="DEIF" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/rexroth.png" alt="Rexroth" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/vaf.png" alt="VAF Instruments" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/msa.png" alt="MSA" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/meiyo-electric.png" alt="Meiyo Electric Japan" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/mmc.png" alt="MMC" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/kangrim.png" alt="Kangrim" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/psm-marine.png" alt="PSM Marine" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/siemens.webp"><img decoding="async" src="partner-logos/siemens.png" alt="Siemens" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/schneider-electric.webp"><img decoding="async" src="partner-logos/schneider-electric.png" alt="Schneider Electric" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/abb.webp"><img decoding="async" src="partner-logos/abb.png" alt="ABB" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/honeywell.webp"><img decoding="async" src="partner-logos/honeywell.png" alt="Honeywell" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/emerson.webp"><img decoding="async" src="partner-logos/emerson.png" alt="Emerson" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/phoenix-contact.webp"><img decoding="async" src="partner-logos/phoenix-contact.png" alt="Phoenix Contact" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/deif.webp"><img decoding="async" src="partner-logos/deif.png" alt="DEIF" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/rexroth.webp"><img decoding="async" src="partner-logos/rexroth.png" alt="Rexroth" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/vaf.webp"><img decoding="async" src="partner-logos/vaf.png" alt="VAF Instruments" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/msa.webp"><img decoding="async" src="partner-logos/msa.png" alt="MSA" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/meiyo-electric.webp"><img decoding="async" src="partner-logos/meiyo-electric.png" alt="Meiyo Electric Japan" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/mmc.webp"><img decoding="async" src="partner-logos/mmc.png" alt="MMC" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/kangrim.webp"><img decoding="async" src="partner-logos/kangrim.png" alt="Kangrim" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/psm-marine.webp"><img decoding="async" src="partner-logos/psm-marine.png" alt="PSM Marine" loading="lazy"></picture></div>
                   <!-- duplicate for seamless loop -->
-                  <div class="partner-logo-capsule"><img src="partner-logos/siemens.png" alt="Siemens" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/schneider-electric.png" alt="Schneider Electric" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/abb.png" alt="ABB" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/honeywell.png" alt="Honeywell" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/emerson.png" alt="Emerson" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/phoenix-contact.png" alt="Phoenix Contact" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/deif.png" alt="DEIF" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/rexroth.png" alt="Rexroth" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/vaf.png" alt="VAF Instruments" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/msa.png" alt="MSA" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/meiyo-electric.png" alt="Meiyo Electric Japan" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/mmc.png" alt="MMC" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/kangrim.png" alt="Kangrim" loading="lazy"></div>
-                  <div class="partner-logo-capsule"><img src="partner-logos/psm-marine.png" alt="PSM Marine" loading="lazy"></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/siemens.webp"><img decoding="async" src="partner-logos/siemens.png" alt="Siemens" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/schneider-electric.webp"><img decoding="async" src="partner-logos/schneider-electric.png" alt="Schneider Electric" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/abb.webp"><img decoding="async" src="partner-logos/abb.png" alt="ABB" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/honeywell.webp"><img decoding="async" src="partner-logos/honeywell.png" alt="Honeywell" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/emerson.webp"><img decoding="async" src="partner-logos/emerson.png" alt="Emerson" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/phoenix-contact.webp"><img decoding="async" src="partner-logos/phoenix-contact.png" alt="Phoenix Contact" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/deif.webp"><img decoding="async" src="partner-logos/deif.png" alt="DEIF" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/rexroth.webp"><img decoding="async" src="partner-logos/rexroth.png" alt="Rexroth" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/vaf.webp"><img decoding="async" src="partner-logos/vaf.png" alt="VAF Instruments" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/msa.webp"><img decoding="async" src="partner-logos/msa.png" alt="MSA" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/meiyo-electric.webp"><img decoding="async" src="partner-logos/meiyo-electric.png" alt="Meiyo Electric Japan" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/mmc.webp"><img decoding="async" src="partner-logos/mmc.png" alt="MMC" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/kangrim.webp"><img decoding="async" src="partner-logos/kangrim.png" alt="Kangrim" loading="lazy"></picture></div>
+                  <div class="partner-logo-capsule"><picture><source type="image/webp" srcset="partner-logos/psm-marine.webp"><img decoding="async" src="partner-logos/psm-marine.png" alt="PSM Marine" loading="lazy"></picture></div>
                 </div>
               </div>
             </div>
@@ -3051,190 +3056,190 @@
           <div id="gallery-all" class="gallery-category layout-4 is-active reveal">
             <!-- Row 1: Tall feature + 3 standard -->
             <div class="gallery-item" data-lightbox="panels/1.png">
-              <img src="panels/1.png" alt="Large PLC control panel open showing internal wiring and PLC racks" loading="lazy" width="480" height="600">
+              <picture><source type="image/webp" srcset="panels/1.webp"><img decoding="async" src="panels/1.png" alt="Large PLC control panel open showing internal wiring and PLC racks" loading="lazy" width="480" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/9.png">
-              <img src="panels/9.png" alt="RTU panel front and interior view" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/9.webp"><img decoding="async" src="panels/9.png" alt="RTU panel front and interior view" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/14.png">
-              <img src="panels/14.png" alt="Emergency generator control panel" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/14.webp"><img decoding="async" src="panels/14.png" alt="Emergency generator control panel" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/25.png">
-              <img src="panels/25.png" alt="Generator control panel with mimic display" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/25.webp"><img decoding="async" src="panels/25.png" alt="Generator control panel with mimic display" loading="lazy" width="480" height="300"></picture>
             </div>
             <!-- Row 1 col 2-4 second row -->
             <div class="gallery-item" data-lightbox="panels/10.png">
-              <img src="panels/10.png" alt="PLC panel internal rack view" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/10.webp"><img decoding="async" src="panels/10.png" alt="PLC panel internal rack view" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/6.png">
-              <img src="panels/6.png" alt="Process control station panel front view" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/6.webp"><img decoding="async" src="panels/6.png" alt="Process control station panel front view" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/15.png">
-              <img src="panels/15.png" alt="BOP remote panel - Tool pusher offshore" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/15.webp"><img decoding="async" src="panels/15.png" alt="BOP remote panel - Tool pusher offshore" loading="lazy" width="480" height="300"></picture>
             </div>
             <!-- Row 2 -->
             <div class="gallery-item" data-lightbox="panels/8.png">
-              <img src="panels/8.png" alt="Large MCC switchboard multi-section" loading="lazy" width="960" height="360">
+              <picture><source type="image/webp" srcset="panels/8.webp"><img decoding="async" src="panels/8.png" alt="Large MCC switchboard multi-section" loading="lazy" width="960" height="360"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/5.png">
-              <img src="panels/5.png" alt="Hydrogen offer panel with control instruments" loading="lazy" width="480" height="360">
+              <picture><source type="image/webp" srcset="panels/5.webp"><img decoding="async" src="panels/5.png" alt="Hydrogen offer panel with control instruments" loading="lazy" width="480" height="360"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/21.png">
-              <img src="panels/21.png" alt="Marine MCC green panel open showing internals" loading="lazy" width="480" height="360">
+              <picture><source type="image/webp" srcset="panels/21.webp"><img decoding="async" src="panels/21.png" alt="Marine MCC green panel open showing internals" loading="lazy" width="480" height="360"></picture>
             </div>
             <!-- Row 3 -->
             <div class="gallery-item" data-lightbox="panels/7.png">
-              <img src="panels/7.png" alt="MCC retrofit before and after comparison" loading="lazy" width="480" height="330">
+              <picture><source type="image/webp" srcset="panels/7.webp"><img decoding="async" src="panels/7.png" alt="MCC retrofit before and after comparison" loading="lazy" width="480" height="330"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/mcc-panel.png">
-              <img src="panels/mcc-panel.png" alt="MCC panel interior and door-mounted control components" loading="lazy" width="480" height="330">
+              <picture><source type="image/webp" srcset="panels/mcc-panel.webp"><img decoding="async" src="panels/mcc-panel.png" alt="MCC panel interior and door-mounted control components" loading="lazy" width="480" height="330"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/13.png">
-              <img src="panels/13.png" alt="Large PLC control panel dual enclosure open" loading="lazy" width="480" height="330">
+              <picture><source type="image/webp" srcset="panels/13.webp"><img decoding="async" src="panels/13.png" alt="Large PLC control panel dual enclosure open" loading="lazy" width="480" height="330"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/20.png">
-              <img src="panels/20.png" alt="Main switchboard panel with bus section" loading="lazy" width="480" height="330">
+              <picture><source type="image/webp" srcset="panels/20.webp"><img decoding="async" src="panels/20.png" alt="Main switchboard panel with bus section" loading="lazy" width="480" height="330"></picture>
             </div>
             <!-- Row 4 -->
             <div class="gallery-item" data-lightbox="panels/28.png">
-              <img src="panels/28.png" alt="Marine PMS panel internal view green enclosure" loading="lazy" width="480" height="600">
+              <picture><source type="image/webp" srcset="panels/28.webp"><img decoding="async" src="panels/28.png" alt="Marine PMS panel internal view green enclosure" loading="lazy" width="480" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/3.png">
-              <img src="panels/3.png" alt="Flood alarm announcement system panel" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/3.webp"><img decoding="async" src="panels/3.png" alt="Flood alarm announcement system panel" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/nlcp.png">
-              <img src="panels/nlcp.png" alt="Navigation light control panel with display and control stations" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/nlcp.webp"><img decoding="async" src="panels/nlcp.png" alt="Navigation light control panel with display and control stations" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/24.png">
-              <img src="panels/24.png" alt="MCC panel with ACB section" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/24.webp"><img decoding="async" src="panels/24.png" alt="MCC panel with ACB section" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/19.png">
-              <img src="panels/19.png" alt="DO purifier control panel" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/19.webp"><img decoding="async" src="panels/19.png" alt="DO purifier control panel" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/23.png">
-              <img src="panels/23.png" alt="Fire and gas system panel" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/23.webp"><img decoding="async" src="panels/23.png" alt="Fire and gas system panel" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-3.png">
-              <img src="panels/retrofit-3.png" alt="Boiler circulating pump retrofit before and after control panel comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-3.webp"><img decoding="async" src="panels/retrofit-3.png" alt="Boiler circulating pump retrofit before and after control panel comparison" loading="lazy" width="600" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-4.png">
-              <img src="panels/retrofit-4.png" alt="Control cabinet retrofit before and after open enclosure comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-4.webp"><img decoding="async" src="panels/retrofit-4.png" alt="Control cabinet retrofit before and after open enclosure comparison" loading="lazy" width="600" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-5.png">
-              <img src="panels/retrofit-5.png" alt="MCC retrofit lineup before and after modernization comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-5.webp"><img decoding="async" src="panels/retrofit-5.png" alt="MCC retrofit lineup before and after modernization comparison" loading="lazy" width="600" height="600"></picture>
             </div>
           </div>
 
           <!-- PLC & AUTOMATION -->
           <div id="gallery-plc" class="gallery-category layout-3">
             <div class="gallery-item" data-lightbox="panels/1.png">
-              <img src="panels/1.png" alt="Large PLC automation panel with orange power supplies and DIN rail" loading="lazy" width="480" height="600">
+              <picture><source type="image/webp" srcset="panels/1.webp"><img decoding="async" src="panels/1.png" alt="Large PLC automation panel with orange power supplies and DIN rail" loading="lazy" width="480" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/2.png">
-              <img src="panels/2.png" alt="Tall PLC enclosure open showing DIN rails" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/2.webp"><img decoding="async" src="panels/2.png" alt="Tall PLC enclosure open showing DIN rails" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/9.png">
-              <img src="panels/9.png" alt="RTU panel dual enclosure front and interior" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/9.webp"><img decoding="async" src="panels/9.png" alt="RTU panel dual enclosure front and interior" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/10.png">
-              <img src="panels/10.png" alt="PLC panel internal DIN rail components" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/10.webp"><img decoding="async" src="panels/10.png" alt="PLC panel internal DIN rail components" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/13.png">
-              <img src="panels/13.png" alt="Large dual-section PLC panel fully open" loading="lazy" width="480" height="600">
+              <picture><source type="image/webp" srcset="panels/13.webp"><img decoding="async" src="panels/13.png" alt="Large dual-section PLC panel fully open" loading="lazy" width="480" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/4.png">
-              <img src="panels/4.png" alt="Control panel interior with PCBs and terminal blocks" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/4.webp"><img decoding="async" src="panels/4.png" alt="Control panel interior with PCBs and terminal blocks" loading="lazy" width="480" height="300"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/27.png">
-              <img src="panels/27.png" alt="Generator control panel multi-section open" loading="lazy" width="480" height="300">
+              <picture><source type="image/webp" srcset="panels/27.webp"><img decoding="async" src="panels/27.png" alt="Generator control panel multi-section open" loading="lazy" width="480" height="300"></picture>
             </div>
           </div>
 
           <!-- MCC & POWER -->
           <div id="gallery-mcc" class="gallery-category layout-3">
             <div class="gallery-item" data-lightbox="panels/8.png">
-              <img src="panels/8.png" alt="Large VFD MCC multi-section switchboard open" loading="lazy" width="960" height="450">
+              <picture><source type="image/webp" srcset="panels/8.webp"><img decoding="async" src="panels/8.png" alt="Large VFD MCC multi-section switchboard open" loading="lazy" width="960" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/14.png">
-              <img src="panels/14.png" alt="Emergency generator control panel front" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/14.webp"><img decoding="async" src="panels/14.png" alt="Emergency generator control panel front" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/20.png">
-              <img src="panels/20.png" alt="Main switchboard panel with multiple sections" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/20.webp"><img decoding="async" src="panels/20.png" alt="Main switchboard panel with multiple sections" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/24.png">
-              <img src="panels/24.png" alt="MCC panel with ACB power section" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/24.webp"><img decoding="async" src="panels/24.png" alt="MCC panel with ACB power section" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/25.png">
-              <img src="panels/25.png" alt="Generator synchronization panel with HMI screen" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/25.webp"><img decoding="async" src="panels/25.png" alt="Generator synchronization panel with HMI screen" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/26.png">
-              <img src="panels/26.png" alt="Small MCB distribution board open" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/26.webp"><img decoding="async" src="panels/26.png" alt="Small MCB distribution board open" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/22.png">
-              <img src="panels/22.png" alt="Flood lighting distribution panel" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/22.webp"><img decoding="async" src="panels/22.png" alt="Flood lighting distribution panel" loading="lazy" width="480" height="420"></picture>
             </div>
           </div>
 
           <!-- PROCESS CONTROL -->
           <div id="gallery-process" class="gallery-category layout-3">
             <div class="gallery-item" data-lightbox="panels/5.png">
-              <img src="panels/5.png" alt="Hydrogen offer panel with indicator lights" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/5.webp"><img decoding="async" src="panels/5.png" alt="Hydrogen offer panel with indicator lights" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/6.png">
-              <img src="panels/6.png" alt="Furnace burner automation panel front view" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/6.webp"><img decoding="async" src="panels/6.png" alt="Furnace burner automation panel front view" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/12.png">
-              <img src="panels/12.png" alt="Furnace automation control panel front view" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/12.webp"><img decoding="async" src="panels/12.png" alt="Furnace automation control panel front view" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/11.png">
-              <img src="panels/11.png" alt="Stainless steel skid-mounted analyser panel" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/11.webp"><img decoding="async" src="panels/11.png" alt="Stainless steel skid-mounted analyser panel" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/23.png">
-              <img src="panels/23.png" alt="Fire and gas detection system" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/23.webp"><img decoding="async" src="panels/23.png" alt="Fire and gas detection system" loading="lazy" width="480" height="420"></picture>
             </div>
           </div>
 
           <!-- MARINE & OFFSHORE -->
           <div id="gallery-marine" class="gallery-category layout-3">
             <div class="gallery-item" data-lightbox="panels/15.png">
-              <img src="panels/15.png" alt="BOP remote panel tool pusher offshore drilling" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/15.webp"><img decoding="async" src="panels/15.png" alt="BOP remote panel tool pusher offshore drilling" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/nlcp.png">
-              <img src="panels/nlcp.png" alt="Navigation light control panel with display and control stations" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/nlcp.webp"><img decoding="async" src="panels/nlcp.png" alt="Navigation light control panel with display and control stations" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/mcc-panel.png">
-              <img src="panels/mcc-panel.png" alt="MCC panel interior and door-mounted control components" loading="lazy" width="480" height="450">
+              <picture><source type="image/webp" srcset="panels/mcc-panel.webp"><img decoding="async" src="panels/mcc-panel.png" alt="MCC panel interior and door-mounted control components" loading="lazy" width="480" height="450"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/21.png">
-              <img src="panels/21.png" alt="Marine MCC green enclosure fully open showing internals" loading="lazy" width="960" height="420">
+              <picture><source type="image/webp" srcset="panels/21.webp"><img decoding="async" src="panels/21.png" alt="Marine MCC green enclosure fully open showing internals" loading="lazy" width="960" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/28.png">
-              <img src="panels/28.png" alt="Marine PMS panel interior green enclosure" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/28.webp"><img decoding="async" src="panels/28.png" alt="Marine PMS panel interior green enclosure" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/3.png">
-              <img src="panels/3.png" alt="Flood alarm announcement system panel" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/3.webp"><img decoding="async" src="panels/3.png" alt="Flood alarm announcement system panel" loading="lazy" width="480" height="420"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/19.png">
-              <img src="panels/19.png" alt="DO purifier control panel" loading="lazy" width="480" height="420">
+              <picture><source type="image/webp" srcset="panels/19.webp"><img decoding="async" src="panels/19.png" alt="DO purifier control panel" loading="lazy" width="480" height="420"></picture>
             </div>
           </div>
 
           <!-- RETROFIT -->
           <div id="gallery-retrofit" class="gallery-category layout-2">
             <div class="gallery-item" data-lightbox="panels/7.png">
-              <img src="panels/7.png" alt="MCC retrofit before and after — rusted to modernized" loading="lazy" width="600" height="540">
+              <picture><source type="image/webp" srcset="panels/7.webp"><img decoding="async" src="panels/7.png" alt="MCC retrofit before and after — rusted to modernized" loading="lazy" width="600" height="540"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/16.png">
-              <img src="panels/16.png" alt="Panel retrofit before and after comparison" loading="lazy" width="600" height="540">
+              <picture><source type="image/webp" srcset="panels/16.webp"><img decoding="async" src="panels/16.png" alt="Panel retrofit before and after comparison" loading="lazy" width="600" height="540"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-3.png">
-              <img src="panels/retrofit-3.png" alt="Boiler circulating pump retrofit before and after control panel comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-3.webp"><img decoding="async" src="panels/retrofit-3.png" alt="Boiler circulating pump retrofit before and after control panel comparison" loading="lazy" width="600" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-4.png">
-              <img src="panels/retrofit-4.png" alt="Control cabinet retrofit before and after open enclosure comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-4.webp"><img decoding="async" src="panels/retrofit-4.png" alt="Control cabinet retrofit before and after open enclosure comparison" loading="lazy" width="600" height="600"></picture>
             </div>
             <div class="gallery-item" data-lightbox="panels/retrofit-5.png">
-              <img src="panels/retrofit-5.png" alt="MCC retrofit lineup before and after modernization comparison" loading="lazy" width="600" height="600">
+              <picture><source type="image/webp" srcset="panels/retrofit-5.webp"><img decoding="async" src="panels/retrofit-5.png" alt="MCC retrofit lineup before and after modernization comparison" loading="lazy" width="600" height="600"></picture>
             </div>
           </div>
 
