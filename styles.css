@@ -1757,6 +1757,22 @@
       .mobile-action-bar {
         display: flex;
       }
+
+      .client-marquee-wrap,
+      .partner-marquee {
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+        mask-image: linear-gradient(to right, transparent, #000 16px, #000 calc(100% - 16px), transparent);
+      }
+
+      .client-marquee-row .partner-logo-capsule {
+        width: 110px;
+        height: 42px;
+      }
+
+      .partner-marquee-row .partner-logo-capsule {
+        width: 120px;
+        height: 46px;
+      }
     }
 
     @media (max-width: 640px) {
