@@ -1948,5 +1948,8 @@
       .gallery-item {
         height: 160px;
       }
+      .gallery-item img {
+        transform: scale(1.12);
+      }
     }
   
