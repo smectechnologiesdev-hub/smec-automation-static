@@ -32,7 +32,8 @@
       }
     };
     window.SMEC_CONFIG = {
-      formEndpoint: "",
+      formEndpoint: "http://127.0.0.1:8000/api/leads/submit/",
+      apiKey: "755ed4ec-35aa-48e8-a552-b1df28f9de24",
       formMethod: "POST",
       thankYouPage: "thank-you.html",
       thankYouAbsoluteUrl: "https://smecoilandgas.com/control-panel-manufacturer-india/thank-you",
@@ -1781,6 +1782,21 @@
           industry: formData.get("industry") || ""
         };
 
+        // Append API key
+        formData.append("api_key", config.apiKey);
+
+        // Append honeypot field (must be empty)
+        formData.append("website", "");
+
+        // Append form_location from the form's data attribute
+        formData.append("form_location", form.dataset.formLocation || "unknown");
+
+        // Send consent as "true" string when checkbox is checked
+        var consentField = form.querySelector('input[name="consent"]');
+        if (consentField) {
+          formData.set("consent", consentField.checked ? "true" : "false");
+        }
+
         trackEvent("rfq_form_submit", payload);
         sendAdsConversion("rfqSubmit", { value: 1.0, currency: "INR" });
 
@@ -1796,19 +1812,40 @@
         }
 
         fetch(endpoint, {
-          method: config.formMethod || "POST",
+          method: "POST",
           body: formData
         }).then(function (response) {
-          if (!response.ok) {
-            throw new Error("Form endpoint returned " + response.status);
-          }
-          trackEvent("rfq_form_success", payload);
-          showFeedback(form, "success", "Submission sent. Redirecting to the thank-you page.");
-          window.setTimeout(function () {
+          if (response.ok) {
+            trackEvent("rfq_form_success", payload);
             redirectToThankYou(form);
-          }, 400);
+            return;
+          }
+          if (response.status === 429) {
+            showFeedback(form, "error", "Too many submissions. Please try again later.");
+            trackEvent("rfq_form_submit_error", payload);
+            return;
+          }
+          if (response.status === 400) {
+            return response.json().then(function (data) {
+              var errors = data.errors || {};
+              Object.keys(errors).forEach(function (fieldName) {
+                var field = form.querySelector('[name="' + fieldName + '"]');
+                if (field) {
+                  var errorEl = document.createElement("span");
+                  errorEl.className = "field-error";
+                  errorEl.textContent = errors[fieldName].join ? errors[fieldName].join(", ") : errors[fieldName];
+                  field.parentNode.appendChild(errorEl);
+                  field.classList.add("is-invalid");
+                }
+              });
+              showFeedback(form, "error", "Please correct the highlighted fields.");
+              trackEvent("rfq_form_validation_error", payload);
+            });
+          }
+          showFeedback(form, "error", "Submission failed. Please try again later.");
+          trackEvent("rfq_form_submit_error", payload);
         }).catch(function () {
-          showFeedback(form, "error", "The form could not be sent to the configured endpoint. Update window.SMEC_CONFIG.formEndpoint or verify the backend integration.");
+          showFeedback(form, "error", "A network error occurred. Please check your connection and try again.");
           trackEvent("rfq_form_submit_error", payload);
         });
       }
